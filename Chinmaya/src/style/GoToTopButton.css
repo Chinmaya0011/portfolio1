@@ -1,0 +1,27 @@
+/* src/style/GoToTopButton.css */
+.go-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.go-to-top.show {
+  opacity: 1;
+}
+
+.go-to-top svg {
+  font-size: 24px; /* Adjust the icon size */
+}

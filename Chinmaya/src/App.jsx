@@ -9,10 +9,12 @@ import Certifications from "./components/Certificate";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/Theme";
+import GoToTopButton from "./components/GoToTopButton"; // Import GoToTopButton
 import "./App.css"; // Import your CSS file for styling
 
 export default function App() {
   const [showContent, setShowContent] = useState(false);
+  const [showGoToTop, setShowGoToTop] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,8 +24,10 @@ export default function App() {
 
       if (scrollTop > scrollThreshold) {
         setShowContent(true);
+        setShowGoToTop(true);
       } else {
         setShowContent(false);
+        setShowGoToTop(false);
       }
     };
 
@@ -38,9 +42,8 @@ export default function App() {
     <ThemeProvider>
       <div className="container">
         <Header />
-          <HeroSection />
-                  <div className={`content ${showContent ? "show" : ""}`}>
-
+        <HeroSection />
+        <div className={`content ${showContent ? "show" : ""}`}>
           <AboutMe />
           <Education />
           <Skills />
@@ -49,6 +52,7 @@ export default function App() {
           <Contact />
           <Footer />
         </div>
+        <GoToTopButton show={showGoToTop} />
       </div>
     </ThemeProvider>
   );
