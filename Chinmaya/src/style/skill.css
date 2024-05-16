@@ -53,7 +53,7 @@
     }
     
     .custom-skill-item-name {
-      font-size: 16px;
+      font-size: 12px;
       font-weight: bold;
     }
     
@@ -73,7 +73,8 @@
     /* Media queries for even smaller screens */
     @media screen and (max-width: 480px) {
       .custom-skill-item {
-        width: calc(100% - 20px); /* One item per row with spacing */
+        font-size: 12px;
+        width: calc(30% - 10px); /* One item per row with spacing */
       }
     }
     

@@ -1,9 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import photo from '../../../public/dp.png';
+import photo from '../../public/mydp.png'
 import { FaGithub, FaLinkedin, FaTwitter, FaHackerrank } from 'react-icons/fa';
-import { useTheme } from './theme.js'; // Adjust the path as needed
+import {useTheme} from './Theme.jsx'
 
 const HeroSection = () => {
   const [profession, setProfession] = useState('Web Developer');
@@ -23,7 +22,7 @@ const HeroSection = () => {
   return (
     <section className={`section1 hero min-h-screen flex flex-col justify-center items-center px-4 ${isDarkMode ? 'dark' : ''}`}>
       <div className="flex flex-col md:flex-row md:space-x-12 items-center gap-8">
-        <Image
+        <img
           src={photo}
           alt="Your Name - Web Developer"
           width={300}

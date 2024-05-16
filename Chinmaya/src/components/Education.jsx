@@ -1,7 +1,7 @@
 
 import React from 'react';
 import '../style/Eaducation.css'; // Import CSS for hover effect
-import { useTheme } from './theme.js'; // Adjust the path as needed
+import {useTheme} from './Theme.jsx'
 
 const Education = () => {
   const { isDarkMode } = useTheme();

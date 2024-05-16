@@ -7,7 +7,7 @@ import Project from "./components/Project";
 import Certifications from "./components/Certificate";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
+import { ThemeProvider } from "./components/Theme";
 export default function App() {
   return (
    <>

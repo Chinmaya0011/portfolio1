@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import projectData from '../projectData/projectdata.js';
 import "../style/project.css";
-import Image from 'next/image.js';
 
 const Project = () => {
   const [currentImageIndexes, setCurrentImageIndexes] = useState(Array(projectData.length).fill(0));
@@ -46,7 +45,7 @@ const Project = () => {
             <button className="prev-button" onClick={() => prevSlide(index)}>Previous</button>
             {/* Wrap the image within a container with a toggleable class */}
             <div className={`image-container ${enlarged ? 'enlarged' : ''}`} onClick={toggleEnlarge}>
-              <Image className="carousel-image" src={project.images[currentImageIndexes[index]]} alt={`Project ${index + 1} Image ${currentImageIndexes[index] + 1}`} />
+              <img className="carousel-image" src={project.images[currentImageIndexes[index]]} alt={`Project ${index + 1} Image ${currentImageIndexes[index] + 1}`} />
             </div>
             <button className="next-button" onClick={() => nextSlide(index)}>Next</button>
           </div>

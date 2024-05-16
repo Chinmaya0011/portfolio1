@@ -1,8 +1,7 @@
 // src/components/Skills.js
 
 import React from 'react';
-import { useTheme } from './theme.js'; // Adjust the path as needed
-
+import {useTheme} from './Theme.jsx'
 
 
 import "../style/skill.css"
@@ -70,7 +69,7 @@ const Skills = () => {
                         <p className={`custom-skill-item-icon ${isDarkMode ? 'text-gray-300' : ''}`}>{skill.icon}</p>
                     </div>
                     <div className={`custom-skill-name-container ${isDarkMode ? 'dark' : ''}`}>
-                        <p className={`custom-skill-item-name ${isDarkMode ? 'text-gray-300' : ''}`}>{skill.name}</p>
+                        <p className={`custom-skill-item-name ${isDarkMode ? 'text-gray-200' : ''}`}>{skill.name}</p>
                     </div>
                 </div>
             </div>
