@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import { FaPhone, FaEnvelope } from 'react-icons/fa'; // Importing phone and envelope icons
 import { FiTwitter, FiFacebook, FiInstagram } from 'react-icons/fi'; // Importing Twitter, Facebook, and Instagram icons
 import "../style/Contact.css";
 import { BiCheck } from 'react-icons/bi'; // Importing the BiCheck icon
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -46,17 +46,20 @@ const Contact = () => {
   return (
     <div className="contact-section flex">
       <div className="contact-details">
-        <h2>Contact Details</h2>
-        <p ><FaPhone /></p> 
-        <p> +91 7077835119</p>{/* Phone icon */}
-        <p ><FaEnvelope /> </p> 
-        <p>imchinu17@gmail.com</p>{/* Envelope icon */}
-        <div className="socialIcon flex">
-          <FiTwitter className="mr-4 text-blue-500 text-2xl" /> {/* Twitter icon */}
-          <FiFacebook className="mr-4 text-blue-500 text-2xl" /> {/* Facebook icon */}
-          <FiInstagram className="text-purple-500 text-2xl" /> {/* Instagram icon */}
-        </div>
-      </div>
+  <h2>Contact Details</h2>
+  <p><FaPhone /></p> 
+  <p>+91 7077835119</p> {/* Phone icon */}
+  <p><FaEnvelope /></p> 
+  <p>imchinu17@gmail.com</p> {/* Envelope icon */}
+  <p><FaMapMarkerAlt /></p> 
+  <p>Bhubaneswar, Odisha</p> {/* Address */}
+  <div className="socialIcon flex">
+    <FiTwitter className="mr-4 text-blue-500 text-2xl" /> {/* Twitter icon */}
+    <FiFacebook className="mr-4 text-blue-500 text-2xl" /> {/* Facebook icon */}
+    <FiInstagram className="text-purple-500 text-2xl" /> {/* Instagram icon */}
+  </div>
+</div>
+
       <div className="contact-form">
         {successMsg ? (
           <div className="message-sent justify-center text-center min-h-full">

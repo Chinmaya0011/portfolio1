@@ -1,0 +1,96 @@
+/* Education.css */
+
+.education {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+
+.education-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.education-container {
+  display: flex;
+  justify-content: center;
+}
+
+.education-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.education-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.education-card-info {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.dark .education-card {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark .education-card:hover {
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+.dark .education-card-title {
+  color: #fff;
+}
+
+.dark .education-card-info {
+  color: #ccc;
+}
+.education-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Ensure the image covers the specified dimensions */
+  border-radius: 10px;
+  display: block; /* Ensures the image behaves as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Define styles for screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 767px) {
+  .education {
+    height: auto; /* Adjust height to fit content */
+    padding: 10px; /* Decrease padding for smaller screens */
+  }
+  
+  .education-title {
+    font-size: 20px; /* Decrease font size for smaller screens */
+  }
+  
+  .education-container {
+    flex-direction: column; /* Display cards in a column for smaller screens */
+  }
+  
+  .education-card {
+    width: 90%; /* Make cards wider to fit smaller screens */
+    margin: 10px auto; /* Center cards horizontally */
+  }
+}

@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import AboutMe from "./components/AboutMe";
@@ -8,21 +9,47 @@ import Certifications from "./components/Certificate";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/Theme";
+import "./App.css"; // Import your CSS file for styling
+
 export default function App() {
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const scrollThreshold = windowHeight * 0.8;
+
+      if (scrollTop > scrollThreshold) {
+        setShowContent(true);
+      } else {
+        setShowContent(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-   <>
-   <ThemeProvider>
-   <Header/>
-  
-   <HeroSection/>
-   <AboutMe/>
-   <Education/>
- <Skills/>
- <Project/>
- <Certifications/>
- <Contact/>
- <Footer/>
-</ThemeProvider>
-   </>
+    <ThemeProvider>
+      <div className="container">
+        <Header />
+          <HeroSection />
+                  <div className={`content ${showContent ? "show" : ""}`}>
+
+          <AboutMe />
+          <Education />
+          <Skills />
+          <Project />
+          <Certifications />
+          <Contact />
+          <Footer />
+        </div>
+      </div>
+    </ThemeProvider>
   );
 }

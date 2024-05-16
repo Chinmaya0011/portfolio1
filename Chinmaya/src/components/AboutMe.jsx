@@ -27,7 +27,7 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <div className={`section1 hero min-h-screen flex flex-col justify-center items-center px-4 ${isDarkMode ? 'dark' : ''}`}>
+    <div id='aboutMe' className={`section1 hero min-h-screen flex flex-col justify-center items-center px-4 ${isDarkMode ? 'dark' : ''}`}>
       <div ref={containerRef} className='justify-center items-center px-4 text-center' style={{ width: containerWidth ? (containerWidth >= 568 ? '60%' : '100%') : 'auto' }}>
         <h1 className={`text-3xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>CHINMAYA KUMAR MISHRA</h1>
         <p className={`text-lg mb-4 ${isDarkMode ? 'text-gray-300' : ''}`}>Full-Stack Web Developer</p>
