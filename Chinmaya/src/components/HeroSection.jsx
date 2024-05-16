@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import photo from '../../public/mydp.png'
 import { FaGithub, FaLinkedin, FaTwitter, FaHackerrank } from 'react-icons/fa';
+
 import {useTheme} from './Theme.jsx'
 
 const HeroSection = () => {
