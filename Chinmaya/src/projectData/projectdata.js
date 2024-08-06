@@ -30,36 +30,36 @@ let projectData = [
   {
     "title": "Project 1 - #100dayJsChallenge",
     "description": "This project allows candidates to participate in my 100-day JavaScript challenge. They can see questions, submit answers, and run code snippets.",
-    "github": "https://github.com/username/100dayJsChallenge",
-    "liveDemo": "https://example.com/100dayJsChallenge",
+    "github": "https://github.com/Chinmaya0011/-100dayJsChallenges",
+    "liveDemo": "https://100day-js-challenges.vercel.app/",
     "images": [js100day1, js100day2, js100day3, js100day4, js100day5]
   },
   {
     "title": "Project 2 - Storepee",
     "description": "Storepee is an e-commerce website where customers can buy products for men, women, kids, and electronics.",
-    "github": "https://github.com/username/storepee",
-    "liveDemo": "https://example.com/storepee",
+    "github": "https://github.com/Chinmaya0011/Storpee",
+    "liveDemo": "https://finasormart.vercel.app/",
     "images": [stroepe1, stroepe2, stroepe3, stroepe4]
   },
   {
     "title": "Project 3 - MoneyMatter",
     "description": "MoneyMatter is an investment calculator where users can calculate their money value according to interest, inflation, total value, and price after tenure.",
-    "github": "https://github.com/username/moneyMatter",
-    "liveDemo": "https://example.com/moneyMatter",
+    "github": "https://github.com/Chinmaya0011/MoneyMatter",
+    "liveDemo": "https://money-matter-seven.vercel.app/",
     "images": [moneymatter1, moneymatter2, moneymatter3]
   },
   {
     "title": "Project 4 - AtlasHub",
     "description": "AtlasHub stores all country data including economy, population, and other relevant information.",
-    "github": "https://github.com/username/atlasHub",
-    "liveDemo": "https://example.com/atlasHub",
+    "github": "https://github.com/Chinmaya0011/AtlasHub",
+    "liveDemo": "https://techscan.vercel.app/",
     "images": [atlashub1, atlashub2]
   },
   {
     "title": "Project 5 - Pokedex",
     "description": "Pokedex is a web application for searching, adding, deleting, comparing, and exploring Pokémon.",
-    "github": "https://github.com/username/pokedex",
-    "liveDemo": "https://example.com/pokedex",
+    "github": "https://github.com/Chinmaya0011/Pokedex",
+    "liveDemo": "https://pokedex-wine-five.vercel.app/",
     "images": [pokedex1]
   },
   {
@@ -72,8 +72,8 @@ let projectData = [
   {
     "title": "Project 7 - CareNexus",
     "description": "CareNexus is a hospital management app for patients where they can make appointments with their favorite doctors.",
-    "github": "https://github.com/username/careNexus",
-    "liveDemo": "https://example.com/careNexus",
+    "github": "https://github.com/Chinmaya0011/Hospital-app",
+    "liveDemo": "https://hospital-app-gray.vercel.app/",
     "images": [carenexu1, carenexu2]
   }
 ];

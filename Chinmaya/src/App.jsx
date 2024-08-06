@@ -11,6 +11,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/Theme";
 import GoToTopButton from "./components/GoToTopButton"; // Import GoToTopButton
+import YouTubeVideo from "./components/YouTubeVideo";
 import "./App.css"; // Import your CSS file for styling
 
 export default function App() {
@@ -46,16 +47,17 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <div className="container">
+      <div className={`container ${showContent ? "show" : ""}`}>
         <Header />
         <HeroSection />
         <div className={`content ${showContent ? "show" : ""}`}>
-          <AboutMe />
-          <Education />
-          <Skills />
-          <Project />
-          <Certifications />
-          <Contact />
+          <section id="aboutMe"><AboutMe /></section>
+          <section id="education"><Education /></section>
+          <section id="skills"><Skills /></section>
+          <section id="youtube-video"><YouTubeVideo /></section>
+          <section id="project"><Project /></section>
+          <section id="certifications"><Certifications /></section>
+          <section id="contact"><Contact /></section>
           <Footer />
         </div>
         {/* <GoToTopButton show={showGoToTop} /> */}
