@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import projectData from '../projectData/projectdata.js';
 import "../style/project.css";
@@ -51,7 +49,7 @@ const Project = () => {
           </div>
           <p className="project-description">{project.description.split(' ').slice(0, 10).join(' ')}</p>
           <p className="project-links">
-            <a className="project-link" href={project.github}>GitHub</a> | <a className="project-link" href={project.liveDemo}>Live Demo</a>
+            <a className="project-link" href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a> | <a className="project-link" href={project.liveDemo} target="_blank" rel="noopener noreferrer">Live Demo</a>
           </p>
         </div>
       ))}
