@@ -1,27 +1,3 @@
-.container {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
-  
-  .content {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-  .content.show {
-    opacity: 1;
-  }
-  
-  /* Add more styling as needed */
-/* App.css */
-.content.show .component {
-    transition: transform 0.3s ease;
-  }
-  
-  .content.show .component:hover {
-    transform: scale(1.05); /* Scale up on hover */
-  }
-    /* Add these styles to your App.css */
 
 .chatbot-container {
   position: fixed;

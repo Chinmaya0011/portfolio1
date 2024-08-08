@@ -1,0 +1,81 @@
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(to right, #f7f7f7, #ffffff);
+  }
+  
+  .about-container {
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    background: linear-gradient(to right, #ffffff, #f1f1f1);
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  .about-container:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  }
+  
+  .about-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about-subheading {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #42e695, #3bb2b8);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact-info {
+   
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .contact-item {
+    margin: 0 auto;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #50c268, #4072c9);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .separator {
+    border-top: 2px solid #ddd;
+    margin: 30px 0;
+  }
+  
+  .about-text {
+    color: linear-gradient(to right, #50c268, #4072c9);
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify; /* Justify text for better readability */
+    color: #333; /* Ensure text is visible */
+  }
+  
