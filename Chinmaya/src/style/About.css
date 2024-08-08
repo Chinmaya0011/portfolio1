@@ -71,11 +71,94 @@
   }
   
   .about-text {
-    color: linear-gradient(to right, #50c268, #4072c9);
     font-size: 1.125rem;
     line-height: 1.7;
     margin-bottom: 20px;
     text-align: justify; /* Justify text for better readability */
     color: #333; /* Ensure text is visible */
   }
+  /* Media queries for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .about-container {
+    padding: 30px; /* Adjust padding for smaller screens */
+  }
   
+  .about-heading {
+    font-size: 2.5rem; /* Reduce font size for smaller screens */
+  }
+  
+  .about-subheading {
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
+  }
+  
+  .contact-info {
+    flex-direction: column; /* Stack contact info vertically */
+  }
+  
+  .contact-item {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+  
+  .icon {
+    font-size: 1.25rem; /* Adjust icon size */
+  }
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 20px; /* Further reduce padding for mobile devices */
+  }
+  
+  .about-heading {
+    font-size: 2rem; /* Reduce font size further for mobile */
+  }
+  
+  .about-subheading {
+    font-size: 1.25rem; /* Reduce font size further for mobile */
+  }
+  
+  .contact-info {
+    flex-direction: column; /* Ensure contact info stacks vertically */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .contact-item {
+    font-size: 0.875rem; /* Adjust font size for better readability on small screens */
+  }
+  
+  .icon {
+    font-size: 1.125rem; /* Adjust icon size */
+  }
+  
+  .separator {
+    margin: 20px 0; /* Adjust margin for smaller screens */
+  }
+}
+
+/* Media queries for very small screens (e.g., phones in portrait mode) */
+@media (max-width: 480px) {
+  .about-container {
+    padding: 15px; /* Minimal padding for very small screens */
+  }
+  
+  .about-heading {
+    font-size: 1.75rem; /* Reduce font size for very small screens */
+  }
+  
+  .about-subheading {
+    font-size: 1rem; /* Reduce font size for very small screens */
+  }
+  
+  .contact-item {
+    font-size: 0.75rem; /* Further reduce font size */
+  }
+  
+  .icon {
+    font-size: 1rem; /* Further reduce icon size */
+  }
+  
+  .about-text {
+    font-size: 1rem; /* Adjust text size for readability */
+  }
+}

@@ -1,80 +1,65 @@
 /* Default styles */
 .custom-skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Horizontally centered */
-  
-  }
-  
-  .custom-skill-item {
-    width: calc(20% - 20px); /* Set your desired width with margin */
-    margin: 5px 10px; /* Set margin around each item */
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(191, 177, 177, 0.387);
-    transition: all 0.3s ease;
-    transform-style: preserve-3d;
-  }
-  
-    
-    .custom-skill-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    }
-    
-    .custom-skill-item-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
-    
-    .custom-skill-item-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .custom-skill-icon-container {
-      background-color: #fff;
-      border-radius: 50%;
-      padding: 15px;
-      margin-bottom: 10px;
-    }
-    
-    .custom-skill-item-icon {
-      font-size: 24px;
-    }
-    
-    .custom-skill-name-container {
-      text-align: center;
-    }
-    
-    .custom-skill-item-name {
-      font-size: 12px;
-      font-weight: bold;
-    }
-    
-    /* Media queries for smaller screens */
-    @media screen and (max-width: 768px) {
-      .custom-skills-container {
-        width: 100%; /* Adjust width for smaller screens */
-        padding: 10px; /* Adjust padding for smaller screens */
-      }
-      
-      .custom-skill-item {
-        width: calc(50% - 20px); /* Two items per row with spacing */
-        margin: 10px;
-      }
-    }
-    
-    /* Media queries for even smaller screens */
-    @media screen and (max-width: 480px) {
-      .custom-skill-item {
-        font-size: 12px;
-        width: calc(30% - 10px); /* One item per row with spacing */
-      }
-    }
-    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Horizontally centered */
+  gap: 20px; /* Gap between items for cleaner look */
+  padding: 20px; /* Added padding for container */
+}
+
+.custom-skill-item {
+  width: calc(20% - 20px); /* Adjust width with margin */
+  margin: 10px; /* Set margin around each item */
+  padding: 20px; /* Increased padding for more content space */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Softer shadow for a modern look */
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  background: #fff; /* White background for each item */
+  text-align: center;
+  position: relative; /* For 3D effect positioning */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Hover effects */
+.custom-skill-item:hover {
+  transform: translateY(-10px) rotateX(2deg) rotateY(2deg); /* Slight 3D effect on hover */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+}
+
+/* Inner content styling */
+.custom-skill-item-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon container */
+.custom-skill-icon-container {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Gradient background */
+  border-radius: 50%;
+  padding: 20px; /* Increased padding for better visual impact */
+  margin-bottom: 15px; /* Space between icon and text */
+  display: inline-flex; /* Center icon within container */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon styling */
+.custom-skill-item-icon {
+  font-size: 2rem; /* Larger icon size for better visibility */
+  color: #333; /* Darker icon color for contrast */
+}
+
+/* Skill name container */
+.custom-skill-name-container {
+  margin-top: 10px;
+}
+
+/* Skill name styling */
+.custom-skill-item-name {
+  font-size: 1rem; /* Adjusted font size for readability */
+  font-weight: bold;
+  color: #333; /* Dark color for text */
+}
