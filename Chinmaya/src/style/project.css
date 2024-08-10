@@ -1,10 +1,31 @@
 /* Base styles for container and project card */
 .container {
-    max-width: 90%;
+   
     margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+    --s: 200px; /* control the size */
+    --c1: #1d1d1d;
+    --c2: #4e4f51;
+    --c3: #3c3c3c;
+  
+    background: repeating-conic-gradient(
+          from 30deg,
+          #0000 0 120deg,
+          var(--c3) 0 180deg
+        )
+        calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+      repeating-conic-gradient(
+        from 30deg,
+        var(--c1) 0 60deg,
+        var(--c2) 0 120deg,
+        var(--c3) 0 180deg
+      );
+    background-size: var(--s) calc(var(--s) * 0.577);
+  
   }
   
   .project-card {
@@ -22,6 +43,14 @@
     align-items: center; 
     border-radius: 10px;
     box-shadow: 0px 8px 16px rgba(205, 166, 38, 0.706);
+    --color: #a748f5;
+    background: linear-gradient(95deg, var(--color) 25%, transparent 25%) -50px 0,
+          linear-gradient(-15deg, var(--color) 25%, transparent 25%) -50px 0,
+          linear-gradient(25deg, transparent 75%, var(--color) 75%) -50px 0,
+          linear-gradient(-45deg, transparent 75%, var(--color) 75%) -50px 0,
+          linear-gradient(-15deg, transparent 75%, var(--color) 75%) -50px 0;
+    background-color: #b669fd;
+    background-size: 40px 40px;
 
   }
   
@@ -32,8 +61,17 @@
   
   .project-card-title {
     margin-bottom: 10px;
-    text-align: center; 
+    text-align: center;
+    font-size: 24px; /* Adjust font size as needed */
+    background: linear-gradient(to right, #E0FFFF, #FFB6C1, #FFD700); /* Light gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),  /* Primary shadow */
+                 3px 3px 6px rgba(0, 0, 0, 0.2),  /* Secondary shadow */
+                 1px 1px 2px rgba(255, 255, 255, 0.6); /* Subtle highlight */
   }
+  
   
   .image-carousel {
     position: relative;
@@ -79,6 +117,17 @@
   .project-links {
     text-align: center;
     margin-top: 20px;
+  }
+  .project-description {
+    font-weight: bold;
+    margin-top: 10px;
+    color: rgb(246, 246, 247);
+    font-size: 14px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7),  /* Dark, primary shadow */
+                 6px 6px 10px rgba(0, 0, 0, 0.6), /* Medium shadow */
+                 9px 9px 15px rgba(0, 0, 0, 0.4), /* Lighter shadow */
+                 -1px -1px 2px rgba(255, 255, 255, 0.2), /* Top left highlight */
+                 2px 2px 2px rgba(0, 0, 0, 0.2); /* Base shadow */
   }
   
   .project-link {

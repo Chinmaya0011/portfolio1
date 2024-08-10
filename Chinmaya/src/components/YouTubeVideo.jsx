@@ -18,7 +18,7 @@ const YouTubeVideo = () => {
           title="Employee CMS Video"
         ></iframe>
       </div>
-        <p className="description">
+        <p className="youtube-description">
         Welcome to the Employee CMS video tutorial. This video provides an overview of how to manage employee data efficiently using our system.
       </p>
     </div>

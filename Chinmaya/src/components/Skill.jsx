@@ -43,8 +43,7 @@ const Skills = () => {
   ];
 
   return (<>
-  <h1 className={`custom-skills-container ${isDarkMode ? 'dark' : ''} mt-4 font-bold text-xl`}>My SKills</h1>
-<div className={`custom-skills-container ${isDarkMode ? 'dark' : ''}`}>
+<div className={`skills custom-skills-container ${isDarkMode ? 'dark' : ''}`}>
 
     {skillsList.map((skill, index) => (
         <div key={index} className={`custom-skill-item ${isDarkMode ? 'dark' : ''}`}>

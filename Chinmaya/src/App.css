@@ -1,16 +1,4 @@
-.container {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
-  
-  .content {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-  .content.show {
-    opacity: 1;
-  }
+
   
   /* Add more styling as needed */
 /* App.css */
