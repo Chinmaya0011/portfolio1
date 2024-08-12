@@ -37,18 +37,32 @@ const AboutMe = () => {
           Full-Stack Web Developer
         </p>
         <div className="contact-info">
-          <p className="contact-item">
-            <FaEnvelope className="icon" /> 
-            imchinu17@gmail.com
-          </p>
-          <p className="contact-item">
-            <FaPhone className="icon" /> 
-            7077835119
-          </p>
-          <p className="contact-item">
-            <FaMapMarkerAlt className="icon" /> 
-            Bhubaneswar, Odisha
-          </p>
+        <p 
+        className="contact-item" 
+        onClick={() => window.location.href = "mailto:imchinu17@gmail.com"}
+        style={{ cursor: 'pointer' }}
+      >
+        <FaEnvelope className="icon" /> 
+        imchinu17@gmail.com
+      </p>
+      
+      <p 
+        className="contact-item" 
+        onClick={() => window.location.href = "tel:7077835119"}
+        style={{ cursor: 'pointer' }}
+      >
+        <FaPhone className="icon" /> 
+        7077835119
+      </p>
+      
+      <p 
+        className="contact-item" 
+        onClick={() => window.open("https://www.google.com/maps?q=Bhubaneswar,+Odisha", "_blank")}
+        style={{ cursor: 'pointer' }}
+      >
+        <FaMapMarkerAlt className="icon" /> 
+        Bhubaneswar, Odisha
+      </p>
         </div>
         <hr className="separator" />
         <p className="about-text">

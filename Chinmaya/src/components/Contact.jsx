@@ -47,11 +47,9 @@ const Contact = () => {
     <div className="contact-section flex">
       <div className="contact-details">
   <h2>Contact Details</h2>
-  <p><FaPhone /></p> 
+ 
   <p>+91 7077835119</p> {/* Phone icon */}
-  <p><FaEnvelope /></p> 
   <p>imchinu17@gmail.com</p> {/* Envelope icon */}
-  <p><FaMapMarkerAlt /></p> 
   <p>Bhubaneswar, Odisha</p> {/* Address */}
   <div className="socialIcon flex">
     <FiTwitter className="mr-4 text-blue-500 text-2xl" /> {/* Twitter icon */}
