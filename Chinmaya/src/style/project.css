@@ -33,7 +33,7 @@
     width: calc(30% - 10px);
     margin: 10px;
     padding: 20px;
-    border: 0.3px solid #ccc;
+    border: 0.3px solid #cccccc4c;
     transition: transform 0.3s ease-in-out;
     height: 500px;
     overflow: hidden;
@@ -43,13 +43,7 @@
     align-items: center; 
     border-radius: 10px;
     box-shadow: 0px 8px 16px rgba(205, 166, 38, 0.706);
-    --color: #a748f5;
-    background: linear-gradient(95deg, var(--color) 25%, transparent 25%) -50px 0,
-          linear-gradient(-15deg, var(--color) 25%, transparent 25%) -50px 0,
-          linear-gradient(25deg, transparent 75%, var(--color) 75%) -50px 0,
-          linear-gradient(-45deg, transparent 75%, var(--color) 75%) -50px 0,
-          linear-gradient(-15deg, transparent 75%, var(--color) 75%) -50px 0;
-    background-color: #b669fd;
+  
     background-size: 40px 40px;
 
   }

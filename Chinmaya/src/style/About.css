@@ -1,19 +1,20 @@
+/* Container for the about section to ensure proper layout and containment */
 .about-section {
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  height: 100%;
-  --s: 200px; /* control the size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent overflow */
+  --s: 200px; /* Control the size */
   --c1: #1d1d1d;
   --c2: #4e4f51;
   --c3: #3c3c3c;
 
   background: repeating-conic-gradient(
-        from 30deg,
-        #0000 0 120deg,
-        var(--c3) 0 180deg
+          from 30deg,
+          #0000 0 120deg,
+          var(--c3) 0 180deg
       )
       calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
     repeating-conic-gradient(
@@ -23,171 +24,190 @@
       var(--c3) 0 180deg
     );
   background-size: var(--s) calc(var(--s) * 0.577);
+  background-color: #2a2a2a; /* Dark background for contrast */
+}
 
-  }
-  
-  .about-container {
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        45deg,
-        transparent 33.33%,
-        rgba(57, 144, 179, 0.1) 33.33%,
-        rgba(0, 0, 0, 0.1) 66.66%,
-        transparent 66.66%
-      ),
-      lightblue;
-    background-size: 20px 20px;
-    transition: transform 0.5s, box-shadow 0.5s;
-  }
-  
-  .about-container:hover {
-    transform: scale(1.05) rotate(1deg);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-  }
-  
-  .about-heading {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  .about-subheading {
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    background: linear-gradient(to right, #42e695, #3bb2b8);
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  }
-  
-  .contact-info {
-   
-    margin: 0 auto;
-    display: flex;
-    margin-bottom: 10px;
-  }
-  
-  .contact-item {
-    margin: 0 auto;
-    font-size: 1.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, #50c268, #4072c9);
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  }
-  
-  .icon {
-    margin-right: 10px;
-    font-size: 1.5rem;
-  }
-  
-  .separator {
-    border-top: 2px solid #ddd;
-    margin: 30px 0;
-  }
-  
-  .about-text {
-    font-size: 1.125rem;
-    line-height: 1.7;
-    margin-bottom: 20px;
-    text-align: justify; /* Justify text for better readability */
-    color: #333; /* Ensure text is visible */
-  }
-  /* Media queries for tablets and smaller screens */
+.about-container {
+  padding: 20px; /* Reduced padding */
+  border-radius: 15px; /* Slightly smaller border radius */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
+  text-align: center;
+  width: 90%; /* Adjusted width */
+  max-width: 900px; /* Max width for larger screens */
+  height: auto; /* Auto height to adjust content */
+  background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05) 33.33%,
+      rgba(57, 144, 179, 0.1) 33.33%,
+      rgba(0, 0, 0, 0.1) 66.66%,
+      rgba(255, 255, 255, 0.05) 66.66%
+  ),
+  rgba(0, 0, 0, 0.6); /* Darker background with gradient */
+  background-size: 25px 25px; /* Adjusted gradient size */
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.about-container:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* More intense shadow */
+}
+
+.about-heading {
+  font-size: 2.8rem; /* Adjusted heading size */
+  font-weight: bold;
+  margin-bottom: 10px; /* Reduced bottom margin */
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Enhanced text shadow */
+}
+
+.about-subheading {
+  font-size: 1.8rem; /* Adjusted subheading size */
+  font-weight: 600;
+  margin-bottom: 15px; /* Reduced bottom margin */
+  background: linear-gradient(to right, #42e695, #3bb2b8);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Enhanced text shadow */
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap; /* Ensure responsiveness */
+  justify-content: center;
+  margin: 15px auto; /* Reduced margin */
+}
+
+.contact-item {
+  font-size: 1.25rem; /* Adjusted font size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #50c268, #4072c9);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  margin: 5px 10px; /* Reduced margin */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+  color: #fff; /* Change color on hover */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+
+.icon {
+  margin-right: 8px; /* Reduced margin */
+  font-size: 1.5rem; /* Adjusted icon size */
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+.separator {
+  border-top: 2px solid #ddd;
+  margin: 20px 0; /* Reduced margin */
+}
+
+.about-text {
+  font-size: 1.125rem; /* Adjusted text size */
+  line-height: 1.7; /* Improved line height */
+  margin-bottom: 20px; /* Reduced bottom margin */
+  text-align: justify;
+  color: #e0e0e0; /* Lighter text color for contrast */
+  transition: color 0.3s ease;
+}
+
+.about-container:hover .about-text {
+  color: #ffffff; /* Change text color on hover */
+}
+
+/* Media queries for responsiveness */
+
+/* For tablets and smaller screens */
 @media (max-width: 1024px) {
   .about-container {
-    padding: 30px; /* Adjust padding for smaller screens */
+      padding: 15px; /* Reduced padding */
   }
-  
+
   .about-heading {
-    font-size: 2.5rem; /* Reduce font size for smaller screens */
+      font-size: 2.5rem; /* Adjusted heading size */
   }
-  
+
   .about-subheading {
-    font-size: 1.5rem; /* Reduce font size for smaller screens */
+      font-size: 1.6rem; /* Adjusted subheading size */
   }
-  
+
   .contact-info {
-    flex-direction: column; /* Stack contact info vertically */
+      flex-direction: column; /* Stack contact items vertically */
   }
-  
+
   .contact-item {
-    font-size: 1rem; /* Adjust font size for smaller screens */
+      font-size: 1rem; /* Adjusted font size */
   }
-  
+
   .icon {
-    font-size: 1.25rem; /* Adjust icon size */
+      font-size: 1.25rem; /* Adjusted icon size */
   }
 }
 
-/* Media queries for mobile devices */
+/* For mobile devices */
 @media (max-width: 768px) {
   .about-container {
-    padding: 20px; /* Further reduce padding for mobile devices */
+      padding: 10px; /* Further reduced padding */
   }
-  
+
   .about-heading {
-    font-size: 2rem; /* Reduce font size further for mobile */
+      font-size: 2rem; /* Reduced font size */
   }
-  
+
   .about-subheading {
-    font-size: 1.25rem; /* Reduce font size further for mobile */
+      font-size: 1.4rem; /* Reduced font size */
   }
-  
+
   .contact-info {
-    flex-direction: column; /* Ensure contact info stacks vertically */
-    align-items: center; /* Center items horizontally */
+      align-items: center; /* Center items */
   }
-  
+
   .contact-item {
-    font-size: 0.875rem; /* Adjust font size for better readability on small screens */
+      font-size: 0.875rem; /* Adjusted font size */
   }
-  
+
   .icon {
-    font-size: 1.125rem; /* Adjust icon size */
+      font-size: 1.125rem; /* Adjusted icon size */
   }
-  
+
   .separator {
-    margin: 20px 0; /* Adjust margin for smaller screens */
+      margin: 15px 0; /* Reduced margin */
   }
 }
 
-/* Media queries for very small screens (e.g., phones in portrait mode) */
+/* For very small screens */
 @media (max-width: 480px) {
   .about-container {
-    padding: 15px; /* Minimal padding for very small screens */
+      padding: 5px; /* Minimal padding */
   }
-  
+
   .about-heading {
-    font-size: 1.75rem; /* Reduce font size for very small screens */
+      font-size: 1.5rem; /* Further reduced font size */
   }
-  
+
   .about-subheading {
-    font-size: 1rem; /* Reduce font size for very small screens */
+      font-size: 1.2rem; /* Further reduced font size */
   }
-  
+
   .contact-item {
-    font-size: 0.75rem; /* Further reduce font size */
+      font-size: 0.75rem; /* Further reduced font size */
   }
-  
+
   .icon {
-    font-size: 1rem; /* Further reduce icon size */
+      font-size: 1rem; /* Further reduced icon size */
   }
-  
+
   .about-text {
-    font-size: 1rem; /* Adjust text size for readability */
+      font-size: 1rem; /* Adjusted text size */
   }
 }

@@ -13,7 +13,7 @@ import { ThemeProvider } from "./components/Theme";
 import GoToTopButton from "./components/GoToTopButton"; // Import GoToTopButton
 import YouTubeVideo from "./components/YouTubeVideo";
 import "./App.css"; // Import your CSS file for styling
-
+import Github from "./components/Github";
 export default function App() {
   const [showContent, setShowContent] = useState(false);
   const [showGoToTop, setShowGoToTop] = useState(false);
@@ -56,6 +56,7 @@ export default function App() {
           <section id="skills"><Skills /></section>
           <section id="youtube-video"><YouTubeVideo /></section>
           <section id="project"><Project /></section>
+          <Github/>
           <section id="certifications"><Certifications /></section>
           <section id="contact"><Contact /></section>
           <Footer />

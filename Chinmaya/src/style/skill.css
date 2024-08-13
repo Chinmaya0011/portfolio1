@@ -6,45 +6,31 @@
   gap: 20px; /* Gap between items for cleaner look */
   padding: 20px; /* Added padding for container */
   width: 100%;
-  height: 100%;
-  --s: 200px; /* control the size */
-  --c1: #1d1d1d;
-  --c2: #4e4f51;
-  --c3: #3c3c3c;
-
-  background: repeating-conic-gradient(
-        from 30deg,
-        #0000 0 120deg,
-        var(--c3) 0 180deg
-      )
-      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
-    repeating-conic-gradient(
-      from 30deg,
-      var(--c1) 0 60deg,
-      var(--c2) 0 120deg,
-      var(--c3) 0 180deg
-    );
-  background-size: var(--s) calc(var(--s) * 0.577);
+  height: auto;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
+/* Skill item styling */
 .custom-skill-item {
-  width: calc(20% - 20px); /* Adjust width with margin */
-  margin: 10px; /* Set margin around each item */
-  padding: 20px; /* Increased padding for more content space */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Softer shadow for a modern look */
+  width: calc(20% - 20px); /* Adjusted width for smaller cards */
+  margin: 10px; /* Space around each item */
+  padding: 15px; /* Reduced padding for smaller cards */
+  border-radius: 12px; /* Slightly smaller rounded corners */
+  background: rgba(255, 255, 255, 0); /* Semi-transparent white background */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow for modern look */
   transition: all 0.3s ease;
-  transform-style: preserve-3d;
-  background: #ffffff28; /* White background for each item */
+  transform-style: preserve-3d; /* For 3D effect */
   text-align: center;
-  position: relative; /* For 3D effect positioning */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  position: relative;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  backdrop-filter: blur(1px); /* Frosted glass effect on items */
 }
 
 /* Hover effects */
 .custom-skill-item:hover {
-  transform: translateY(-10px) rotateX(2deg) rotateY(2deg); /* Slight 3D effect on hover */
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+  transform: translateY(-8px) rotateX(3deg) rotateY(3deg); /* Enhanced 3D effect */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 /* Inner content styling */
@@ -59,27 +45,41 @@
 .custom-skill-icon-container {
   background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Gradient background */
   border-radius: 50%;
-  padding: 20px; /* Increased padding for better visual impact */
-  margin-bottom: 15px; /* Space between icon and text */
-  display: inline-flex; /* Center icon within container */
+  padding: 15px; /* Reduced padding for smaller icon container */
+  margin-bottom: 10px; /* Reduced space between icon and text */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for icon container */
 }
 
 /* Icon styling */
 .custom-skill-item-icon {
-  font-size: 2rem; /* Larger icon size for better visibility */
-  color: #333; /* Darker icon color for contrast */
+  font-size: 2rem; /* Adjusted icon size */
+  color: #ffffff; /* White icon color for contrast */
 }
 
 /* Skill name container */
 .custom-skill-name-container {
-  margin-top: 10px;
+  margin-top: 8px; /* Adjusted margin-top */
 }
 
 /* Skill name styling */
 .custom-skill-item-name {
-  font-size: 1rem; /* Adjusted font size for readability */
+  font-size: 0.9rem; /* Slightly smaller font size for readability */
   font-weight: bold;
   color: #ffffff; /* Dark color for text */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .custom-skill-item {
+    width: calc(40% - 20px); /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-skill-item {
+    width: calc(100% - 20px); /* Full width on very small screens */
+  }
 }

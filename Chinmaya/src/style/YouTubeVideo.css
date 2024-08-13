@@ -4,71 +4,74 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  border: 1px solid #dddddd16;
-  border-radius: 10px;
-  max-width: 900px;
-  margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3), 0 6px 20px rgba(0, 255, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Lighter border */
+  border-radius: 12px; /* Slightly more rounded corners */
+  max-width: 1000px; /* Adjusted max width for better fit */
+  margin: 20px auto; /* Added margin for better spacing */
+  background: rgba(255, 255, 255, 0.893); /* Slightly transparent background */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15), 0 8px 24px rgba(0, 0, 0, 0.1); /* Soft shadow */
   animation: youtube-fadeIn 1s ease-in-out;
 }
 
-  
-  .youtube-wrapper h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #ebbf2c;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-  
- .youtube-description{
-  width: 70%;
+.youtube-wrapper h1 {
+  font-size: 2rem; /* Adjusted for a cleaner look */
+  margin-bottom: 10px;
+  color: #f57c00; /* Warm orange color */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.youtube-description {
+  width: 80%; /* Slightly wider for better readability */
   margin: 0 auto;
-    font-size: 1.2em;
-    color: #ebe0e0;
-    text-align: center;
-    margin-bottom: 20px;
-    animation: youtube-slideIn 1s ease-in-out;
+  font-size: 1.1rem; /* Adjusted font size */
+  color: #333; /* Darker text color for contrast */
+  text-align: center;
+  margin-bottom: 20px;
+  animation: youtube-slideIn 1s ease-in-out;
+}
+
+.youtube-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width for responsive design */
+  max-width: 900px; /* Consistent max width */
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(0, 0, 0, 0.1); /* Slight background for video container */
+}
+
+.youtube-container:hover {
+  transform: scale(1.02); /* Slight zoom effect */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+}
+
+.youtube-container iframe {
+  width: 100%; /* Full width of container */
+  height: 315px; /* Fixed height for consistency */
+  border: none; /* Remove default border */
+}
+
+/* Animations */
+@keyframes youtube-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  .youtube-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .youtube-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes youtube-slideIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
   }
-  
-  .youtube-container iframe {
-    border: 0;
-   
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  /* Animations */
-  @keyframes youtube-fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes youtube-slideIn {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
+}

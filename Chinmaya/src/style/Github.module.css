@@ -1,0 +1,201 @@
+.githubComponent {
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 450px;
+    margin: 40px auto;
+    
+    color: #ecf0f1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+/* Custom Scrollbar */
+.githubComponent::-webkit-scrollbar {
+    width: 8px;
+}
+
+.githubComponent::-webkit-scrollbar-track {
+    background: #2c3e50; /* Dark background for the track */
+    border-radius: 10px;
+}
+
+.githubComponent::-webkit-scrollbar-thumb {
+    background: #ecf0f1; /* Light gray thumb */
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.githubComponent::-webkit-scrollbar-thumb:hover {
+    background: #f39c12; /* Bright color on hover */
+}
+
+.githubComponent::-webkit-scrollbar-thumb:active {
+    background: #e67e22; /* Even brighter color when active */
+}
+
+.githubComponent::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+    z-index: -1;
+    transform: rotate(45deg);
+    animation: lightPulse 5s infinite linear;
+}
+
+@keyframes lightPulse {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        transform: rotate(45deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+.githubComponent:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), inset 0 8px 15px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px #000;
+    background: linear-gradient(90deg, #f39c12, #f1c40f, #e67e22);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 4s infinite linear;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.header svg {
+    margin-right: 15px;
+    color: #f1c40f;
+    animation: iconSpin 4s infinite linear;
+}
+
+@keyframes iconSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Bio Styles */
+.bio {
+    margin-bottom: 30px;
+    line-height: 1.7;
+    font-size: 1.2em;
+    text-align: justify;
+
+color: #cad4dd;
+    -webkit-background-clip: text;
+  
+    animation: gradientShift 4s infinite linear;
+}
+
+/* Repositories Section */
+.repoHeader {
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    border-bottom: 4px solid #f39c12;
+    padding-bottom: 8px;
+    background: linear-gradient(90deg, #f39c12, #f1c40f, #e67e22);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 4s infinite linear;
+}
+
+.repoList {
+    list-style: none;
+    padding: 0;
+}
+
+.repoItem {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.repoItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    transform: scale(0.95);
+    transition: transform 0.4s ease;
+}
+
+.repoItem:hover::before {
+    transform: scale(1);
+}
+
+.repoLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ecf0f1;
+    background: linear-gradient(145deg, #e74c3c, #c0392b, #d35400);
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.repoLink:hover {
+    background: linear-gradient(145deg, #f1c40f, #f39c12, #e67e22);
+    color: #2c3e50;
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.repoLink::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
+    z-index: -1;
+    transform: rotate(45deg);
+    animation: lightPulse 5s infinite linear;
+}
+
+.repoLink svg {
+    margin-right: 12px;
+    color: #f1c40f;
+}

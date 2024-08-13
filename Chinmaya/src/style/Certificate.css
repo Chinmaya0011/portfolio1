@@ -1,82 +1,143 @@
-
 /* Certification container */
 .certifications-container {
-    margin: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; /* Gap between certification cards */
-  }
-  
-  /* Certification card */
-/* Certification card */
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 /* Certification card */
 .certification-card {
-    height: 300px;
-    width: calc(25% - 20px); /* Adjusted width considering the gap */
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow-y: scroll; /* Add overflow scrolling */
-    background-color: #f9f9f9; /* Light background color */
-    transform: translateZ(0); /* Enable hardware acceleration for smoother animations */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
-  }
-  
-  /* Hide the scrollbar */
-  .certification-card::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .certification-card:hover {
-    transform: translateZ(10px); /* Add depth effect on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for 3D effect */
-  }
-  
-  /* Certification header */
-  .certification-header {
-    height: 80px;
-    padding: 20px;
-    background-color: #007bff; /* Blue header background */
-    color: white; /* White text color */
-  }
-  
-  .certification-title {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  /* Certification details */
-  .certification-details {
-    padding: 20px;
-  }
-  
-  .certification-detail {
-    margin-bottom: 10px;
-  }
-  
-  .certification-detail strong {
-    font-weight: bold;
-  }
-  
-  .certification-detail a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .certification-detail a:hover {
-    text-decoration: underline;
-  }
-  /* Media query for tablets and larger devices */
+  color: white;
+  height: 320px;
+  width: calc(25% - 20px); /* Adjusted width considering the gap */
+  margin-bottom: 20px;
+  border-radius: 15px;
+  overflow-y: scroll; /* Add overflow scrolling */
+  background: linear-gradient(145deg, #1e2a38, #34495e); /* Stylish gradient background */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 5px 10px rgba(255, 255, 255, 0.1); /* Depth effect */
+  transform: translateZ(0);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+/* Add a 3D look with a pseudo-element */
+.certification-card::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: linear-gradient(145deg, #2c3e50, #1e2a38);
+  z-index: -1;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translateZ(-20px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.certification-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+.certification-card:hover::before {
+  transform: translateZ(-30px);
+}
+
+/* Hide the scrollbar */
+.certification-card::-webkit-scrollbar {
+  display: none;
+}
+
+/* Certification header */
+.certification-header {
+  height: 80px;
+  padding: 20px;
+  background: linear-gradient(145deg, #2e9cca, #206ba3); /* Gradient blue header */
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* White text color */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+  position: relative;
+}
+
+/* Add an icon in the header */
+.certification-header .header-icon {
+  font-size: 30px;
+  margin-right: 10px;
+  color: #ffffffb3; /* Slightly transparent white */
+}
+
+/* Add a glow effect on hover */
+.certification-card:hover .header-icon {
+  text-shadow: 0 0 8px #ffffff, 0 0 15px #2e9cca;
+}
+
+.certification-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff; /* Bright white text */
+  text-transform: uppercase;
+}
+
+/* Certification details */
+.certification-details {
+  padding: 20px;
+}
+
+.certification-detail {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ecf0f1; /* Light text color */
+  transition: color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+/* Icons in the details */
+.certification-detail .detail-icon {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #1abc9c; /* Bright teal icon color */
+  transition: color 0.3s ease-in-out;
+}
+
+.certification-detail:hover .detail-icon {
+  color: #16a085; /* Darker teal on hover */
+}
+
+.certification-detail strong {
+  font-weight: bold;
+}
+
+.certification-detail a {
+  color: #1abc9c; /* Bright teal link color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.certification-detail a:hover {
+  color: #16a085; /* Darker teal on hover */
+  text-decoration: underline;
+}
+
+/* Media query for tablets and larger devices */
 @media (max-width: 991px) {
-    .certification-card {
+  .certification-card {
       width: calc(33.3333% - 20px); /* Adjusted width for tablets */
-    }
   }
-  
-  /* Media query for smaller devices (e.g., smartphones) */
-  @media (max-width: 767px) {
-    .certification-card {
+}
+
+/* Media query for smaller devices (e.g., smartphones) */
+@media (max-width: 767px) {
+  .certification-card {
       width: calc(50% - 20px); /* Adjusted width for smaller devices */
-    }
   }
+}
